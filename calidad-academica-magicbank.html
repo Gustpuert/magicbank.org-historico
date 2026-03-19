@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MagicBank | Academic Excellence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050B1E;
+  --gold: #D6B15A;
+  --white: #FFFFFF;
+  --gray: #CFCFD6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+}
+
+/* NAV */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(5,11,30,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  z-index: 9999;
+}
+
+.menu-logo {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.menu-toggle {
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 70px;
+  right: -260px;
+  width: 260px;
+  height: calc(100vh - 70px);
+  background: rgba(5,11,30,0.98);
+  padding: 30px;
+  transition: 0.3s;
+  overflow-y: auto;
+}
+
+.menu.open { right: 0; }
+
+.menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.menu a:hover { color: var(--gold); }
+
+.menu .lang {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HERO */
+.hero {
+  margin-top: 70px;
+  height: 90vh;
+  background: url("https://magicbank.org/anexos/picture-calidad-academica.png") center / contain no-repeat;
+  background-color: #050B1E;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+.title {
+  text-align: center;
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.block {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(214,177,90,0.25);
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.block h3 {
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.block p {
+  color: var(--gray);
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
+.audit-list {
+  margin-top: 18px;
+  padding-left: 20px;
+}
+
+.audit-list li {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.audit-highlight {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--gold);
+  background: rgba(214,177,90,0.08);
+  border-radius: 10px;
+}
+
+.audit-highlight p {
+  margin: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu-bar">
+  <div class="menu-logo">MagicBank</div>
+  <div class="menu-toggle" id="menuBtn">☰ Menú</div>
+</div>
+
+<div class="menu" id="menu">
+  <a href="https://magicbank.org">Inicio</a>
+  <a href="https://academy.magicbank.org/">Academy</a>
+  <a href="https://gustpuert.github.io/university.magicbank.org/">University</a>
+  <a href="https://magicbank.org/fabrica-de-tutores-pago.html">Fábrica de Tutores</a>
+
+  <!-- Idiomas -->
+  <div class="lang">
+    <a href="#es">Español</a>
+    <a href="#en">English</a>
+    <a href="#zh">中文</a>
+  </div>
+</div>
+
+<section class="hero"></section>
+
+<div class="container">
+
+<!-- ESPAÑOL -->
+<h2 id="es" class="title">CALIDAD ACADÉMICA</h2>
+
+<div class="block">
+  <h3>Modelo Educativo</h3>
+  <p>
+    MagicBank es un ecosistema educativo totalmente automatizado, diseñado para formar profesionales reales mediante tutores con inteligencia artificial entrenados específicamente para enseñar.
+  </p>
+</div>
+
+<div class="block">
+  <h3>Aprendizaje Guiado</h3>
+  <p>
+    El tutor se adapta al estudiante, identifica fortalezas, debilidades y ritmo de aprendizaje.
+  </p>
+</div>
+
+<div class="block">
+  <h3>Evaluación Real</h3>
+  <p>
+    El estudiante avanza únicamente cuando demuestra dominio real del contenido.
+  </p>
+</div>
+
+<div class="block">
+  <h3>Actualización Permanente</h3>
+  <p>
+    Los contenidos se actualizan automáticamente desde fuentes oficiales.
+  </p>
+</div>
+
+<div class="block">
+  <h3>Filosofía MagicBank</h3>
+  <p>
+    MagicBank no vende títulos. Forma profesionales con criterio y conocimiento real.
+  </p>
+</div>
+
+<div class="block" id="audit-es">
+  <h3>Auditoría Académica Interna</h3>
+  <p>
+    MagicBank no habilita tutores académicos sin validación técnica y pedagógica previa. Cada tutor institucional es sometido a una auditoría académica interna rigurosa antes de entrar en operación formativa.
+  </p>
+  <p>
+    Esta auditoría verifica la coherencia entre el Documento Maestro, el prompt madre del tutor, la arquitectura modular, los criterios de avance, los mecanismos de recuperación pedagógica y la lógica general de enseñanza. El objetivo no es solo revisar contenido, sino confirmar que el tutor puede enseñar con consistencia, trazabilidad y control real del aprendizaje.
+  </p>
+
+  <ul class="audit-list">
+    <li>Se revisa la alineación entre documento rector, identidad del tutor, módulos y banco de prompts.</li>
+    <li>Se valida que el avance ocurra únicamente por comprensión demostrada y no por exposición pasiva del contenido.</li>
+    <li>Se comprueba la presencia de evaluación continua, control anti-copy, sustentación escrita y recuperación pedagógica por capas.</li>
+    <li>Se verifica la incorporación de criterios transversales como seguridad, rigor técnico, coherencia curricular y progresión formativa.</li>
+    <li>Se emite un dictamen institucional formal que puede ser: habilitado, habilitado con mejoras no bloqueantes o no habilitado.</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      Un tutor con auditoría positiva en MagicBank queda formalmente habilitado para impartir clases. Esto significa que su operación académica cumple los criterios mínimos de calidad institucional y que sus oportunidades de mejora no impiden su uso formativo.
+    </p>
+  </div>
+</div>
+
+<div class="block">
+  <h3>Resultado de Auditoría Positiva</h3>
+  <p>
+    Cuando un tutor obtiene auditoría positiva, MagicBank considera que existe base suficiente para su despliegue académico. La aprobación no implica perfección estática, sino validación operativa con mejora continua controlada.
+  </p>
+
+  <ul class="audit-list">
+    <li>El tutor puede enseñar desde ya dentro de su especialidad.</li>
+    <li>La estructura curricular queda considerada funcional y consistente.</li>
+    <li>La evaluación implícita del aprendizaje queda aceptada como mecanismo principal de avance.</li>
+    <li>Las observaciones restantes se clasifican como no bloqueantes y se atienden bajo mejora continua.</li>
+    <li>La existencia de auditoría interna fortalece la confiabilidad académica del ecosistema MagicBank.</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      La auditoría interna de MagicBank constituye un mecanismo propio de aseguramiento de calidad académica, orientado a garantizar tutores confiables, exigentes, técnicamente auditables y pedagógicamente consistentes.
+    </p>
+  </div>
+</div>
+
+<!-- ENGLISH -->
+<h2 id="en" class="title">ACADEMIC QUALITY</h2>
+
+<div class="block">
+  <p>
+    MagicBank is a fully automated educational ecosystem designed to train real professionals through AI tutors.
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    Each tutor adapts to the student's learning pace and cognitive level.
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    Content is permanently updated using official sources.
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    MagicBank builds professionals, not memorizers.
+  </p>
+</div>
+
+<div class="block">
+  <h3>Internal Academic Audit</h3>
+  <p>
+    MagicBank does not authorize academic tutors without prior technical and pedagogical validation. Every institutional tutor undergoes a rigorous internal academic audit before being deployed for teaching.
+  </p>
+  <p>
+    This audit verifies coherence across the Master Document, the tutor’s core prompt, the modular architecture, progression criteria, pedagogical recovery mechanisms and the general teaching logic. The purpose is not only to review content, but to confirm that the tutor can teach with consistency, traceability and real control of learning progression.
+  </p>
+
+  <ul class="audit-list">
+    <li>Alignment is reviewed across the governing document, tutor identity, modules and prompt bank.</li>
+    <li>The tutor must advance only through demonstrated understanding, not passive exposure to content.</li>
+    <li>Continuous assessment, anti-copy controls, written justification and layered recovery mechanisms are verified.</li>
+    <li>Cross-cutting criteria such as security, technical rigor, curricular consistency and learning progression are checked.</li>
+    <li>A formal institutional decision is issued: approved, approved with non-blocking improvements, or not approved.</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      A tutor with a positive MagicBank audit is formally authorized to teach. This means its academic operation meets the minimum institutional quality standards, and any remaining improvements do not prevent deployment.
+    </p>
+  </div>
+</div>
+
+<div class="block">
+  <h3>Positive Audit Outcome</h3>
+  <p>
+    When a tutor receives a positive audit, MagicBank considers it sufficiently validated for academic deployment. Approval does not imply static perfection, but operational validation with controlled continuous improvement.
+  </p>
+
+  <ul class="audit-list">
+    <li>The tutor may begin teaching immediately within its approved specialty.</li>
+    <li>The curricular structure is considered functional and consistent.</li>
+    <li>Implicit assessment is accepted as the main progression mechanism.</li>
+    <li>Remaining observations are classified as non-blocking and handled through continuous improvement.</li>
+    <li>The existence of internal auditing strengthens the academic reliability of the MagicBank ecosystem.</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      MagicBank’s internal audit serves as its own academic quality assurance mechanism, designed to guarantee reliable, demanding, technically auditable and pedagogically consistent tutors.
+    </p>
+  </div>
+</div>
+
+<!-- 中文 -->
+<h2 id="zh" class="title">学术质量</h2>
+
+<div class="block">
+  <p>
+    MagicBank 是一个完全自动化的教育生态系统，通过人工智能导师培养真正的专业人才。
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    教学过程根据学生能力动态调整，确保真正掌握知识。
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    所有内容均来自官方来源并持续更新。
+  </p>
+</div>
+
+<div class="block">
+  <p>
+    MagicBank 培养具有全球竞争力的专业人士。
+  </p>
+</div>
+
+<div class="block">
+  <h3>内部学术审计</h3>
+  <p>
+    MagicBank 不会在未经技术与教学验证的情况下启用学术导师。每一位机构导师在正式投入教学前，都必须通过严格的内部学术审计。
+  </p>
+  <p>
+    审计将核查总纲文件、导师核心提示词、模块化架构、学习推进标准、教学补救机制以及整体教学逻辑之间的一致性。其目的不仅是检查内容本身，更是确认导师能够以稳定、可追溯且真正可控的方式开展教学。
+  </p>
+
+  <ul class="audit-list">
+    <li>审查治理文件、导师身份、模块结构与提示词库之间的一致性。</li>
+    <li>确认导师只有在学生证明真实理解后才允许继续推进。</li>
+    <li>验证持续性评估、反抄袭控制、书面论证和分层补救机制。</li>
+    <li>检查安全性、技术严谨性、课程一致性和学习 progression 等横向标准。</li>
+    <li>最终形成正式机构结论：通过、附非阻塞改进通过、或不通过。</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      通过 MagicBank 正面审计的导师，将被正式授权开展教学。这表示其学术运行已经满足机构最低质量标准，而剩余改进项不会阻碍其投入使用。
+    </p>
+  </div>
+</div>
+
+<div class="block">
+  <h3>正面审计结果</h3>
+  <p>
+    当导师获得正面审计结果时，MagicBank 认为其已经具备足够条件投入学术运行。批准并不意味着静态完美，而是意味着该导师已达到可运行、可验证、可持续优化的标准。
+  </p>
+
+  <ul class="audit-list">
+    <li>导师可以立即在核准专业范围内开展教学。</li>
+    <li>课程结构被视为功能完整且一致。</li>
+    <li>隐性评估被接受为主要学习推进机制。</li>
+    <li>剩余观察项被归类为非阻塞改进，并纳入持续优化流程。</li>
+    <li>内部审计机制增强了 MagicBank 教育生态的学术可信度。</li>
+  </ul>
+
+  <div class="audit-highlight">
+    <p>
+      MagicBank 的内部审计机制，是其自身的学术质量保障体系，用于确保导师可靠、严格、可技术审计且具备教学一致性。
+    </p>
+  </div>
+</div>
+
+</div>
+
+<script>
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", function(e) {
+  e.stopPropagation();
+  menu.classList.toggle("open");
+});
+
+menu.addEventListener("click", function(e) {
+  e.stopPropagation();
+});
+
+document.body.addEventListener("click", function() {
+  menu.classList.remove("open");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank - Logo Animado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #050A25, #0A1240);
+      color: var(--blanco);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    /* Contenedor principal */
+    .logo-container {
+      text-align: center;
+    }
+
+    /* Texto principal MagicBank */
+    .magicbank {
+      font-size: 72px;
+      font-weight: 600;
+      background: linear-gradient(
+        180deg,
+        #f9e27a 0%,
+        #e3c45d 30%,
+        #d6b15a 50%,
+        #a6863b 70%,
+        #705820 100%
+      );
+      background-size: 100% 200%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: luzOla 8s ease-in-out infinite;
+      letter-spacing: 1px;
+    }
+
+    /* Subtítulo */
+    .subtitulo {
+      font-size: 26px;
+      font-weight: 400;
+      color: #fff5d9;
+      text-shadow: 0 0 6px rgba(255, 221, 140, 0.5);
+      margin-top: 10px;
+    }
+
+    /* Animación de ola dorada descendente */
+    @keyframes luzOla {
+      0% { background-position: 100% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .magicbank { font-size: 48px; }
+      .subtitulo { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="magicbank">MagicBank</div>
+    <div class="subtitulo">La educación del futuro, hoy</div>
+  </div>
+
+  <footer>MagicBank © Ecosistema educativo guiado por Inteligencia Artificial</footer>
+</body>
+</html>

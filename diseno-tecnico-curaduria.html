@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank | Diseño Técnico del Sistema de Curaduría Académica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+      --gris: #CFCFD6;
+      --gris-oscuro: #9CA3AF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header h1 {
+      font-size: 44px;
+      color: var(--dorado);
+      margin-bottom: 18px;
+      letter-spacing: 0.8px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: var(--gris);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 24px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      background: rgba(255,255,255,0.04);
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    }
+
+    h2 {
+      font-size: 32px;
+      color: var(--dorado);
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: var(--dorado);
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--gris);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 12px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: var(--gris);
+      font-size: 15.5px;
+    }
+
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--dorado);
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 13px;
+      color: var(--gris-oscuro);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Diseño Técnico del Sistema de Curaduría Académica</h1>
+  <p>
+    Documento institucional canónico que describe la arquitectura técnica,
+    lógica operativa y trazabilidad del sistema automatizado de curaduría,
+    actualización y control académico de MagicBank.
+  </p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. Propósito del Sistema</h2>
+  <p>
+    El Sistema de Curaduría MagicBank garantiza que todos los contenidos impartidos
+    por tutores y facultades se mantengan permanentemente actualizados, alineados
+    con fuentes oficiales, investigaciones recientes y estándares académicos
+    verificables.
+  </p>
+</section>
+
+<section>
+  <h2>2. Arquitectura General</h2>
+  <p>
+    El sistema se compone de capas técnicas independientes, automatizadas y
+    auditables, que permiten detectar cambios externos, evaluarlos académicamente
+    y reflejarlos en los módulos educativos sin improvisación humana.
+  </p>
+
+  <h3>Capas del sistema</h3>
+  <ul>
+    <li>Fuentes oficiales y académicas externas.</li>
+    <li>Bot Detector MagicBank (detección automática).</li>
+    <li>Curator IA MagicBank (evaluación institucional).</li>
+    <li>Registro Canónico de Curaduría.</li>
+    <li>Tutores MagicBank (enseñanza actualizada).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>3. Bot Detector MagicBank</h2>
+  <p>
+    El Bot Detector es un componente automatizado de solo lectura cuya función es
+    monitorear fuentes oficiales (legales, técnicas, normativas o científicas)
+    y detectar eventos relevantes para las facultades MagicBank.
+  </p>
+
+  <h3>Funciones técnicas</h3>
+  <ul>
+    <li>Monitoreo periódico de fuentes oficiales.</li>
+    <li>Detección de nuevas leyes, reformas, sentencias o investigaciones.</li>
+    <li>Extracción de metadatos (país, rama, fecha, fuente).</li>
+    <li>Generación de reportes estructurados.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>4. Curator IA MagicBank</h2>
+  <p>
+    El Curator IA es el evaluador académico institucional. Recibe los reportes del
+    Bot Detector y determina, con criterios académicos, si un evento requiere
+    actualización curricular.
+  </p>
+
+  <h3>Decisiones posibles</h3>
+  <ul>
+    <li>Actualización obligatoria de módulo.</li>
+    <li>Referencia contextual sin cambio curricular.</li>
+    <li>Registro sin impacto académico.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. Registro Canónico de Curaduría</h2>
+  <p>
+    Todas las decisiones quedan documentadas en un registro institucional que
+    garantiza trazabilidad, auditoría y veracidad histórica del proceso educativo.
+  </p>
+
+  <ul>
+    <li>Fecha de detección.</li>
+    <li>Fuente oficial.</li>
+    <li>Módulo afectado.</li>
+    <li>Decisión tomada.</li>
+    <li>Fecha de implementación.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>6. Impacto en Tutores y Alumnos</h2>
+  <p>
+    Los tutores MagicBank no improvisan ni interpretan cambios externos. Enseñan
+    exclusivamente contenidos previamente curados y validados por el sistema.
+    El alumno siempre accede a la versión vigente del conocimiento.
+  </p>
+</section>
+
+<section>
+  <h2>7. Frecuencia y Control</h2>
+  <ul>
+    <li>Detección automática: diaria o semanal.</li>
+    <li>Evaluación académica: bajo demanda.</li>
+    <li>Auditoría institucional: trimestral.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. Declaración Institucional</h2>
+  <p>
+    MagicBank opera un sistema automatizado de detección, evaluación y actualización
+    académica basado exclusivamente en fuentes verificables, análisis institucional
+    y trazabilidad documentada. Este sistema garantiza vigencia continua del
+    conocimiento impartido.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  MagicBank © Sistema de Curaduría Académica · Documento Técnico Canónico<br>
+  Transparencia · Veracidad · Educación Viva
+</footer>
+
+</body>
+</html>

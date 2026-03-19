@@ -1,0 +1,105 @@
+/* ==========================================================
+   MagicBank | Ecosistema educativo guiado por IA
+   Hoja de estilos oficial - estilos-magicbank.css
+   ========================================================== */
+
+:root {
+  --azul-profundo: #070C2A;
+  --blanco: #FFFFFF;
+  --gris: #CFCFD6;
+  --dorado: #D6B15A;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--azul-profundo);
+  color: var(--blanco);
+  overflow-x: hidden;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ======================================
+   HERO PRINCIPAL: AULA MAGICBANK
+   ====================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('../img/hero/aula-magicbank.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+/* Logo principal */
+.hero .logo {
+  position: relative;
+  width: 260px;
+  height: auto;
+  animation: halo 4s ease-in-out infinite;
+  margin-bottom: 30px;
+}
+
+/* Slogan */
+.hero h1 {
+  font-size: 28px;
+  color: var(--dorado);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(214, 177, 90, 0.7);
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 18px;
+  color: var(--gris);
+  font-weight: 400;
+}
+
+/* ======================================
+   ANIMACIONES
+   ====================================== */
+
+/* Halo dorado que respira como si el logo estuviera vivo */
+@keyframes halo {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(214, 177, 90, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(214, 177, 90, 0.9));
+    transform: scale(1.03);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgba(214, 177, 90, 0.4));
+    transform: scale(1);
+  }
+}
+
+/* ======================================
+   RESPONSIVE
+   ====================================== */
+
+@media (max-width: 768px) {
+  .hero .logo {
+    width: 180px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 15px;
+  }
+}
